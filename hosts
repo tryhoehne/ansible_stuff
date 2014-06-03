@@ -1,0 +1,4 @@
+[webservers]
+# put webserver ip here
+[dbserver]
+# put db server ip here
