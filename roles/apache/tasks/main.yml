@@ -1,8 +1,13 @@
 ---
-# Install Apache
+# Install Apache and PHP5 modules
 
  - name: Install apache2
    apt: name=apache2 state=present
 
- - name: Install php module for Apache
+ - name: Install php5
    apt: name=php5 state=present
+
+ - name: Install php5-mysql
+   apt: name=php5-mysql state=present
+ 
+   notify: restart apache
