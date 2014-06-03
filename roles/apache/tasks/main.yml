@@ -1,0 +1,8 @@
+---
+# Install Apache
+
+ - name: Install apache2
+   apt: name=apache2 state=present
+
+ - name: Install php module for Apache
+   apt: name=php5 state=present
