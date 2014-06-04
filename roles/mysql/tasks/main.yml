@@ -5,4 +5,4 @@
    apt: name=mysql-server state=present
 
  - name: Start mysql
-   service: name=msyqld state=started enabled=yes
+   service: name=mysql state=started enabled=yes
