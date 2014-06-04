@@ -9,5 +9,15 @@
 
  - name: Install php5-mysql
    apt: name=php5-mysql state=present
- 
+
+ - name: Install php5-gd
+   apt: name=php5-gd state=present
+  
    notify: restart apache
+
+ - name: apache state
+   service: name=apache state=started enabled=yes
+
+# Install iptables-persistent
+# - name: Install iptables-persistent
+#   apt: name=iptables-persistent state=present
