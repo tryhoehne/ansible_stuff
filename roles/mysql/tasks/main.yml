@@ -1,0 +1,8 @@
+---
+# Install and configure mysql
+
+ - name: Install Mysql server
+   apt: name=mysql-server state=present
+
+ - name: Start mysql
+   service: name=msyqld state=started enabled=yes

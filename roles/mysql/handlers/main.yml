@@ -1,0 +1,10 @@
+---
+
+#Handler file to be called by apache/tasks/main.yml to restart Apache after php installation via notify: restart apache
+
+
+- name: restart apache
+  service: name=apache2 state=restarted
+- name: save iptables
+  command: iptables-save > /etc/iptables/rules
+
